@@ -1,0 +1,173 @@
+/* Basic styling for body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f7fa;
+    color: #333;
+}
+h1{
+    color:  #007bff;
+}
+/* Container for side-by-side layout */
+.side-by-side-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Left container (image upload section) */
+.left-container {
+    /* flex: 1; */
+    max-width: 50%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #555;
+}
+
+/* Right container (additional content) */
+.right-container {
+    flex: 1;
+    max-width: 50%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #555;
+}
+
+.right-container h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.right-container p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Grid container for cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 8.5cm);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+/* Card styling */
+.card {
+    width: 8.5cm;
+    height: 5.4cm;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide file input element */
+input[type="file"] {
+    display: none;
+}
+
+/* Styling for images */
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Button styles for rotate and remove */
+.rotate-btn,
+.remove-btn {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 102, 204, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px 12px;
+    transition: background-color 0.2s;
+}
+
+.rotate-btn:hover,
+.remove-btn:hover {
+    background-color: rgba(0, 102, 204, 1);
+}
+
+/* Position rotate button to the right */
+.rotate-btn {
+    right: 10px;
+}
+
+/* Position remove button to the left */
+.remove-btn {
+    left: 10px;
+}
+
+/* Styling for download PDF button */
+button.download-btn {
+    padding: 10px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 3px 5px rgba(0, 123, 255, 0.4);
+}
+
+button.download-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Button container styling */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Rotate all button styling */
+.rotate-all-btn {
+    padding: 10px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 3px 5px rgba(40, 167, 69, 0.4);
+}
+
+.rotate-all-btn:hover {
+    background-color: #218838;
+}

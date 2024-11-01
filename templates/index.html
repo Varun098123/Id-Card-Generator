@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+
+<body>
+
+    <h1>VK AUTO ID CARD Setter</h1>
+
+    <div class="side-by-side-container">
+        <div class="left-container">
+            <h1>Front Page</h1>
+            <div class="grid">
+                <div class="card" id="card11">
+                    <input type="file" id="file11" accept="image/*" onchange="loadImageR(this, 11)" />
+                    <img id="img11" src="" alt="Image 1" onclick="document.getElementById('file11').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 11)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 11)">Remove</button>
+                </div>
+
+                <div class="card" id="card12">
+                    <input type="file" id="file12" accept="image/*" onchange="loadImageR(this, 12)" />
+                    <img id="img12" src="" alt="Image 2" onclick="document.getElementById('file12').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 12)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 12)">Remove</button>
+                </div>
+
+                <div class="card" id="card13">
+                    <input type="file" id="file13" accept="image/*" onchange="loadImageR(this, 13)" />
+                    <img id="img13" src="" alt="Image 3" onclick="document.getElementById('file13').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 13)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 13)">Remove</button>
+                </div>
+
+                <div class="card" id="card14">
+                    <input type="file" id="file14" accept="image/*" onchange="loadImageR(this, 14)" />
+                    <img id="img14" src="" alt="Image 4" onclick="document.getElementById('file14').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 14)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 14)">Remove</button>
+                </div>
+
+                <div class="card" id="card15">
+                    <input type="file" id="file15" accept="image/*" onchange="loadImageR(this, 15)" />
+                    <img id="img15" src="" alt="Image 5" onclick="document.getElementById('file15').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 15)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 15)">Remove</button>
+                </div>
+
+                <div class="card" id="card16">
+                    <input type="file" id="file16" accept="image/*" onchange="loadImageR(this, 16)" />
+                    <img id="img16" src="" alt="Image 6" onclick="document.getElementById('file16').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 16)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 16)">Remove</button>
+                </div>
+
+                <div class="card" id="card17">
+                    <input type="file" id="file17" accept="image/*" onchange="loadImageR(this, 17)" />
+                    <img id="img17" src="" alt="Image 7" onclick="document.getElementById('file17').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 17)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 17)">Remove</button>
+                </div>
+
+                <div class="card" id="card18">
+                    <input type="file" id="file18" accept="image/*" onchange="loadImageR(this, 18)" />
+                    <img id="img18" src="" alt="Image 8" onclick="document.getElementById('file18').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 18)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 18)">Remove</button>
+                </div>
+
+                <div class="card" id="card19">
+                    <input type="file" id="file19" accept="image/*" onchange="loadImageR(this, 19)" />
+                    <img id="img19" src="" alt="Image 9" onclick="document.getElementById('file19').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 19)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 19)">Remove</button>
+                </div>
+
+                <div class="card" id="card20">
+                    <input type="file" id="file20" accept="image/*" onchange="loadImageR(this, 20)" />
+                    <img id="img20" src="" alt="Image 10" onclick="document.getElementById('file20').click()" />
+                    <button class="rotate-btn" onclick="rotateImageR(event, 20)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImageR(event, 20)">Remove</button>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="rotate-all-btn" onclick="rotateAllImagesR()">Rotate All Images</button>
+                <button class="download-btn" onclick="downloadPDFR()">Download PDF</button>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <h1>Back Page</h1>
+            <!-- Grid layout for cards -->
+            <div class="grid">
+                <!-- Repeat for each card (up to 10 cards), as shown earlier -->
+                <div class="card" id="card1">
+                    <input type="file" id="file1" accept="image/*" onchange="loadImage(this, 1)" />
+                    <img id="img1" src="" alt="Image 1" onclick="document.getElementById('file1').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 1)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 1)">Remove</button>
+                </div>
+    
+                <div class="card" id="card2">
+                    <input type="file" id="file2" accept="image/*" onchange="loadImage(this, 2)" />
+                    <img id="img2" src="" alt="Image 2" onclick="document.getElementById('file2').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 2)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 2)">Remove</button>
+                </div>
+    
+                <div class="card" id="card3">
+                    <input type="file" id="file3" accept="image/*" onchange="loadImage(this, 3)" />
+                    <img id="img3" src="" alt="Image 3" onclick="document.getElementById('file3').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 3)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 3)">Remove</button>
+                </div>
+    
+                <div class="card" id="card4">
+                    <input type="file" id="file4" accept="image/*" onchange="loadImage(this, 4)" />
+                    <img id="img4" src="" alt="Image 4" onclick="document.getElementById('file4').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 4)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 4)">Remove</button>
+                </div>
+    
+                <div class="card" id="card5">
+                    <input type="file" id="file5" accept="image/*" onchange="loadImage(this, 5)" />
+                    <img id="img5" src="" alt="Image 5" onclick="document.getElementById('file5').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 5)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 5)">Remove</button>
+                </div>
+    
+                <div class="card" id="card6">
+                    <input type="file" id="file6" accept="image/*" onchange="loadImage(this, 6)" />
+                    <img id="img6" src="" alt="Image 6" onclick="document.getElementById('file6').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 6)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 6)">Remove</button>
+                </div>
+    
+                <div class="card" id="card7">
+                    <input type="file" id="file7" accept="image/*" onchange="loadImage(this, 7)" />
+                    <img id="img7" src="" alt="Image 7" onclick="document.getElementById('file7').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 7)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 7)">Remove</button>
+                </div>
+    
+                <div class="card" id="card8">
+                    <input type="file" id="file8" accept="image/*" onchange="loadImage(this, 8)" />
+                    <img id="img8" src="" alt="Image 8" onclick="document.getElementById('file8').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 8)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 8)">Remove</button>
+                </div>
+    
+                <div class="card" id="card9">
+                    <input type="file" id="file9" accept="image/*" onchange="loadImage(this, 9)" />
+                    <img id="img9" src="" alt="Image 9" onclick="document.getElementById('file9').click()" />
+                    <button class="rotate-btn " onclick="rotateImage(event, 9)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 9)">Remove</button>
+                </div>
+    
+                <div class="card" id="card10">
+                    <input type="file" id="file10" accept="image/*" onchange="loadImage(this, 10)" />
+                    <img id="img10" src="" alt="Image 10" onclick="document.getElementById('file10').click()" />
+                    <button class="rotate-btn" onclick="rotateImage(event, 10)">Rotate</button>
+                    <button class="remove-btn" onclick="removeImage(event, 10)">Remove</button>
+                </div>
+                <!-- Repeat similar cards for all 10 cards -->
+            </div>
+    
+            <div class="buttons">
+                <button class="rotate-all-btn" onclick="rotateAllImages()">Rotate All Images</button>
+                <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        //for FRONT
+        let rotationsR = {}; // Store rotation state for each image
+        let imageRotatedR = false; // Track if any image is rotated
+
+        // Load image and reset rotation state
+        function loadImageR(input, index) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById(`img${index}`);
+                    img.src = e.target.result; // Set the image source
+                    rotationsR[index] = 0; // Reset rotation state
+                    img.style.transform = "translate(-50%, -50%) rotate(0deg)";
+                    imageRotatedR = false; // Reset image rotated state
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeImageR(event, index) {
+            event.stopPropagation(); // Prevent triggering file upload when clicking remove button
+            const img = document.getElementById(`img${index}`);
+
+            // Clear the image src and reset its transformation
+            img.src = "";
+            img.style.transform = "translate(-50%, -50%) rotate(0deg)";
+
+            // Reset the rotation state for the specific card
+            rotations[index] = 0;
+
+            // Also reset the file input to allow re-upload
+            const fileInput = document.getElementById(`file${index}`);
+            fileInput.value = ""; // Clear the file input
+
+            // Optionally, set the imageRotated flag to false if all images are removed
+            imageRotated = false;
+        }
+
+        // Rotate individual image only once (toggle between 0 and 90 degrees)
+        function rotateImageR(event, index) {
+            event.stopPropagation();
+            const img = document.getElementById(`img${index}`);
+            const currentRotation = rotationsR[index] || 0;
+
+            // Toggle between 0 and 90 degrees rotation
+            const newRotation = currentRotation === 0 ? 90 : 0;
+            rotationsR[index] = newRotation;
+
+            // Set image rotated state to true when the image is rotated
+            imageRotatedR = newRotation === 90;
+
+            // Apply the new rotation
+            img.style.transform = `translate(-50%, -50%) rotate(${newRotation}deg)`;
+        }
+
+        // Rotate all images at once
+        function rotateAllImagesR() {
+            let anyImageRotatedR = false; // Track if any image is rotated
+            for (let i = 11; i <= 20; i++) {
+                const img = document.getElementById(`img${i}`);
+                if (img.src && img.src !== "") { // Check if image exists
+                    rotateImageR({ stopPropagation: () => { } }, i);
+                    const currentRotation = rotationsR[i] || 0;
+                    // If the image is rotated to 90 degrees, update the flag
+                    if (currentRotation === 90) {
+                        anyImageRotatedR = true;
+                    }
+                }
+            }
+            imageRotatedR = anyImageRotatedR; // Set the global rotated state
+        }
+
+
+        // Download PDF with images
+        async function downloadPDFR() {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF({
+                orientation: "portrait",
+                unit: "cm",
+                format: "a4",
+            });
+
+            const leftMargin = 2;
+            // Set topMargin based on whether any image is rotated
+            const topMargin = imageRotatedR ? -8 : 0.3;
+            const cardWidth = 8.5;
+            const cardHeight = 5.4;
+            let x = leftMargin;
+            let y = topMargin;
+
+            for (let i = 11; i <= 20; i++) {
+                const img = document.getElementById(`img${i}`);
+                const hasImage = img.src && img.src !== ""; // Check if the image is uploaded
+
+                if (hasImage) {
+                    const image = new Image();
+                    image.src = img.src;
+
+                    await new Promise((resolve, reject) => {
+                        image.onload = () => {
+                            const rotationAngle = rotationsR[i] || 0;
+
+                            // Apply the opposite rotation in PDF
+                            const adjustedRotationAngle = (360 - rotationAngle) % 360;
+
+                            // Keep the original width and height logic for the image position
+                            const pdfWidth = rotationAngle % 180 === 0 ? cardWidth : cardHeight;
+                            const pdfHeight = rotationAngle % 180 === 0 ? cardHeight : cardWidth;
+
+                            try {
+                                // Add image to the PDF with the adjusted rotation angle
+                                pdf.addImage(
+                                    image,                  // Image object
+                                    "PNG",                  // Image format
+                                    x,                      // X position in PDF
+                                    y,                      // Y position in PDF
+                                    pdfWidth,               // Image width
+                                    pdfHeight,              // Image height
+                                    undefined,              // Alias
+                                    "FAST",                 // Compression quality
+                                    adjustedRotationAngle   // Opposite rotation angle for PDF
+                                );
+                            } catch (error) {
+                                console.error(`Error adding image to PDF: ${error}`);
+                                reject(error);
+                            }
+                            resolve();
+                        };
+
+                        image.onerror = () => {
+                            console.warn(`Failed to load image for index ${i}`);
+                            resolve();
+                        };
+                    });
+                }
+
+                // Draw gray rectangle for empty cards (same logic as before)
+                if (!hasImage) {
+                    pdf.setFillColor(240, 240, 240); // Gray background
+                    pdf.rect(x, y, cardWidth, cardHeight, "F"); // Draw rectangle for empty space
+                }
+
+                // Move to the next position for the next image
+                x += cardWidth + 0.5;
+                if (x + cardWidth > 21 + leftMargin) {
+                    x = leftMargin;
+                    y += cardHeight + 0.45;
+                }
+                if (y + cardHeight > 29.7 - topMargin) {
+                    pdf.addPage(); // Add new page if we reach the bottom of the current page
+                    x = leftMargin;
+                    y = topMargin;
+                }
+            }
+
+            // Save the final PDF
+            pdf.save("@VK_ID_Card_Front.pdf");
+        }
+
+
+        // for BACK
+        let rotations = {};
+        let imageRotated = false;
+
+        function loadImage(input, index) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById(`img${index}`);
+                    img.src = e.target.result; // Set the image source
+                    rotations[index] = 0; // Reset rotation state
+                    img.style.transform = "translate(-50%, -50%) rotate(0deg)";
+                    imageRotated = false; // Reset image rotated state
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeImage(event, index) {
+            event.stopPropagation(); // Prevent triggering file upload when clicking remove button
+            const img = document.getElementById(`img${index}`);
+
+            // Clear the image src and reset its transformation
+            img.src = "";
+            img.style.transform = "translate(-50%, -50%) rotate(0deg)";
+
+            // Reset the rotation state for the specific card
+            rotations[index] = 0;
+
+            // Also reset the file input to allow re-upload
+            const fileInput = document.getElementById(`file${index}`);
+            fileInput.value = ""; // Clear the file input
+
+            // Optionally, set the imageRotated flag to false if all images are removed
+            imageRotated = false;
+        }
+
+        // Rotate individual image only once (toggle between 0 and 90 degrees)
+        function rotateImage(event, index) {
+            event.stopPropagation();
+            const img = document.getElementById(`img${index}`);
+            const currentRotation = rotations[index] || 0;
+
+            // Toggle between 0 and 90 degrees rotation
+            const newRotation = currentRotation === 0 ? 90 : 0;
+            rotations[index] = newRotation;
+
+            // Set image rotated state to true when the image is rotated
+            imageRotated = newRotation === 90;
+
+            // Apply the new rotation
+            img.style.transform = `translate(-50%, -50%) rotate(${newRotation}deg)`;
+        }
+
+        // Rotate all images at once
+        function rotateAllImages() {
+            let anyImageRotated = false; // Track if any image is rotated
+            for (let i = 1; i <= 10; i++) {
+                const img = document.getElementById(`img${i}`);
+                if (img.src && img.src !== "") { // Check if image exists
+                    rotateImage({ stopPropagation: () => { } }, i);
+                    const currentRotation = rotations[i] || 0;
+                    // If the image is rotated to 90 degrees, update the flag
+                    if (currentRotation === 90) {
+                        anyImageRotated = true;
+                    }
+                }
+            }
+            imageRotated = anyImageRotated; // Set the global rotated state
+        }
+
+        // Download PDF with images
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF({
+                orientation: "portrait",
+                unit: "cm",
+                format: "a4",
+            });
+
+            const leftMargin = 2;
+            // Set topMargin based on whether any image is rotated
+            const topMargin = imageRotated ? -8 : 0.3;
+            const cardWidth = 8.5;
+            const cardHeight = 5.4;
+            let x = leftMargin;
+            let y = topMargin;
+
+            // Swap card positions in pairs (card1 with card2, card3 with card4, etc.)
+            const cardOrder = [2, 1, 4, 3, 6, 5, 8, 7, 10, 9];
+
+            for (let i = 0; i < cardOrder.length; i++) {
+                const cardIndex = cardOrder[i];
+                const img = document.getElementById(`img${cardIndex}`);
+                const hasImage = img.src && img.src !== ""; // Check if the image is uploaded
+
+                if (hasImage) {
+                    const image = new Image();
+                    image.src = img.src;
+
+                    await new Promise((resolve, reject) => {
+                        image.onload = () => {
+                            const rotationAngle = rotations[cardIndex] || 0;
+
+                            // Apply the opposite rotation in PDF
+                            const adjustedRotationAngle = (360 - rotationAngle) % 360;
+
+                            // Keep the original width and height logic for the image position
+                            const pdfWidth = rotationAngle % 180 === 0 ? cardWidth : cardHeight;
+                            const pdfHeight = rotationAngle % 180 === 0 ? cardHeight : cardWidth;
+
+                            try {
+                                // Add image to the PDF with the adjusted rotation angle
+                                pdf.addImage(
+                                    image,                  // Image object
+                                    "PNG",                  // Image format
+                                    x,                      // X position in PDF
+                                    y,                      // Y position in PDF
+                                    pdfWidth,               // Image width
+                                    pdfHeight,              // Image height
+                                    undefined,              // Alias
+                                    "FAST",                 // Compression quality
+                                    adjustedRotationAngle   // Opposite rotation angle for PDF
+                                );
+                            } catch (error) {
+                                console.error(`Error adding image to PDF: ${error}`);
+                                reject(error);
+                            }
+                            resolve();
+                        };
+
+                        image.onerror = () => {
+                            console.warn(`Failed to load image for index ${cardIndex}`);
+                            resolve();
+                        };
+                    });
+                }
+
+                // Draw gray rectangle for empty cards (same logic as before)
+                if (!hasImage) {
+                    pdf.setFillColor(240, 240, 240); // Gray background
+                    pdf.rect(x, y, cardWidth, cardHeight, "F"); // Draw rectangle for empty space
+                }
+
+                // Move to the next position for the next image
+                x += cardWidth + 0.5;
+                if (x + cardWidth > 21 + leftMargin) {
+                    x = leftMargin;
+                    y += cardHeight + 0.45;
+                }
+                if (y + cardHeight > 29.7 - topMargin) {
+                    pdf.addPage(); // Add new page if we reach the bottom of the current page
+                    x = leftMargin;
+                    y = topMargin;
+                }
+            }
+
+            // Save the final PDF
+            pdf.save("@VK_ID_Card_back.pdf");
+        }
+
+    </script>
+</body>
+</html>
